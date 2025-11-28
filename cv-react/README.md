@@ -1,16 +1,103 @@
-# React + Vite
+Proyecto React – Reutilización de Componentes (EV07)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto forma parte de la actividad GA1-220501096-03-AA1-EV07 – Reutilización de Componentes en React, donde se aplican conceptos como props, desestructuración, componentes reutilizables y estructura modular en React.
 
-Currently, two official plugins are available:
+Tecnologías Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+React 18
 
-## React Compiler
+JavaScript ES6+
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Vite (para entorno de desarrollo rápido)
 
-## Expanding the ESLint configuration
+CSS / Tailwind (si lo usaste)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Git & GitHub
+
+Estructura del Proyecto
+src/
+├── components/
+│ ├── Header.jsx
+│ ├── Profile.jsx
+│ ├── Card.jsx
+│ └── Footer.jsx
+├── App.jsx
+├── main.jsx
+└── assets/
+
+Objetivo del Proyecto
+
+El objetivo principal es crear componentes reutilizables usando props y desestructuración, organizando la interfaz en secciones claras:
+
+Cabecera
+
+Perfil del usuario
+
+Tarjetas reutilizables (Cards)
+
+Pie de página
+
+Cada componente recibe información mediante props y puede repetirse varias veces sin duplicar código.
+
+Componentes creados
+
+1. Header.jsx
+
+Componente encargado de mostrar el título o cabecera principal del proyecto.
+
+2. Profile.jsx
+
+Muestra información del usuario utilizando props como:
+
+nombre
+
+ocupación
+
+imagen del perfil
+
+3. Card.jsx
+
+Componente reusable diseñado para mostrar contenido dinámico.
+Se utiliza para múltiples secciones: información, tareas, enlaces, etc.
+
+4. Footer.jsx
+
+Cierre visual del sitio con información adicional.
+
+🛠️ Instalación y ejecución
+
+Sigue estos pasos para ejecutar el proyecto en tu equipo:
+
+# 1. Clonar el repositorio
+
+git clone https://github.com/simon-s-pizza/proyecto-angular-react-7.git
+
+# 2. Entrar a la carpeta del proyecto
+
+cd proyecto-angular-react-7
+
+# 3. Instalar dependencias
+
+npm install
+
+# 4. Ejecutar el proyecto
+
+npm run dev
+
+Cómo reutilizar componentes
+
+Ejemplo simple:
+
+<Card
+  titulo="Mi primera card"
+  descripcion="Este componente es reutilizable mediante props."
+/>
+
+Vista previa del proyecto
+
+![alt text](src/image.png)
+
+Licencia
+
+Este proyecto fue desarrollado con fines educativos para el SENA.
+Puedes usarlo y modificarlo libremente.
