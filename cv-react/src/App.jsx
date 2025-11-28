@@ -1,3 +1,8 @@
+import CabeceraCV from "./components/cabeceraCV";
+import Perfil from "./components/Perfil";
+import Experiencia from "./components/Experiencia";
+import Educacion from "./components/Educacion";
+
 export default function App() {
   const datosPersonales = {
     nombre: "Simón Toro",
@@ -12,7 +17,7 @@ export default function App() {
   const experiencias = [
     { cargo: "Frontend Trainee", empresa: "Empresa X", periodo: "2023 - 2024" },
     {
-      cargo: "Auxiliar TI",
+      cargo: "Auxiliar IT",
       empresa: "TecnoSoluciones",
       periodo: "2022 - 2023",
     },
@@ -23,5 +28,20 @@ export default function App() {
     { titulo: "Curso React", institucion: "Udemy", año: "2024" },
   ];
 
-  return <div>{/* Aquí se cargarán los componentes */}</div>;
+  return (
+    <div>
+      <CabeceraCV
+        nombre={datosPersonales.nombre}
+        cargo={datosPersonales.cargo}
+        ciudad={datosPersonales.ciudad}
+        contacto={datosPersonales.contacto}
+      />
+
+      <Perfil resumen={resumen} />
+
+      <Experiencia experiencias={experiencias} />
+
+      <Educacion estudios={estudios} />
+    </div>
+  );
 }
